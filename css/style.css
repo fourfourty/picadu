@@ -1,0 +1,578 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "San Francisco Pro";
+  src: local("San Francisco Pro Display Semibold"),
+    local("San-Francisco-Pro-Display-Semibold"),
+    url("/fonts/SFProDisplay-Semibold.woff2") format("woff2"),
+    url("/fonts/SFProDisplay-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "San Francisco Pro";
+  src: local("San Francisco Pro Display Regular"),
+    local("San-Francisco-Pro-Display-Regular"),
+    url("/fonts/SFProDisplay-Regular.woff2") format("woff2"),
+    url("/fonts/SFProDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "San Francisco Pro Display Regular", sans-serif;
+  background-color: #e5e5e5;
+}
+
+.buttons {
+  background-color: #faad14;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  padding: 13px;
+  cursor: pointer;
+  border: none;
+}
+
+.burger {
+  display: none;
+  background-image: url("/img/burger.jpg");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 10%;
+  margin: 0 20px;
+}
+
+.close {
+  background-image: url("/img/x.jpg");
+}
+
+.header {
+  background-color: #fa8c16;
+  padding: 16px 0;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+}
+
+.header-wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav {
+  margin-left: 60px;
+  margin-right: auto;
+}
+.nav .nav__list {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav .nav__link {
+  text-decoration: none;
+  color: #fafafa;
+  margin-right: 15px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.header__search-form {
+  width: 237px;
+  height: 32px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #d9d9d9;
+}
+
+.header__input {
+  border: none;
+  height: 100%;
+  width: 80%;
+  font-size: 14px;
+  line-height: 22px;
+  color: #bfbfbf;
+  padding-left: 12px;
+}
+
+.header__input::-moz-placeholder {
+  color: #bfbfbf;
+}
+.header__input::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+.header__input:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+.header__input::-ms-input-placeholder {
+  color: #bfbfbf;
+}
+.header__input::placeholder {
+  color: #bfbfbf;
+}
+
+.header__button {
+  height: 100%;
+  width: 20%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content .content__posts {
+  /* max-width: 800px; */
+  width: 67%;
+}
+
+.content .posts__post {
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 30px;
+}
+
+.content .post__body {
+  padding-top: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 0;
+}
+
+.content .post__title {
+  font-family: "San Francisco Pro Display Semibold", sans-serif;
+  margin-top: 0;
+  margin-bottom: 19px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.content .post__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #262626;
+}
+
+.content .post__tags {
+  margin-bottom: 22px;
+}
+
+.content .post__tags .tag {
+  color: #bfbfbf;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.content .post__footer {
+  background: #fafafa;
+  border-top: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 47px 21px 36px;
+}
+
+.content .post__footer .icon {
+  fill: #8c8c8c;
+}
+
+.content .likes__icon,
+.content .comments__icon {
+  margin-right: 6px;
+}
+
+.content .footer-posts__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.content .post__footer .button__post {
+  background-color: transparent;
+  border: none;
+  color: #8c8c8c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 22px;
+  margin-right: 19px;
+}
+
+.content .footer-posts__author {
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+.content .footer-posts__author .author__avatar {
+  width: 34px;
+  height: 34px;
+  margin-left: 9px;
+}
+
+.content .author__username {
+  font-family: "San Francisco Pro Display Semibold", sans-serif;
+  display: block;
+  text-decoration: none;
+  color: #8c8c8c;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 4px;
+}
+
+.content .author__post-time {
+  color: #bfbfbf;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/*Sidebar */
+
+.sidebar {
+  width: 31%;
+}
+
+.sidebar .sidebar__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  border: 1px solid #e8e8e8;
+  padding: 15px 25px;
+}
+
+.sidebar .user__info {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar .user__avatar {
+  border-radius: 50%;
+  margin-right: 17px;
+}
+
+.sidebar .user__name {
+  font-family: "San Francisco Pro Display Semibold", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+  text-decoration: none;
+}
+
+.sidebar .exit__icon {
+  width: 20px;
+  height: 20px;
+  fill: #000;
+}
+
+.sidebar .sidebar__nav {
+  background-color: #fff;
+}
+.sidebar .nav__menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-top: none;
+  border: 1px solid #e8e8e8;
+}
+
+.sidebar .nav__link {
+  width: 100%;
+  display: inline-block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #595959;
+  text-decoration: none;
+  padding: 16px 48px 16px 16px;
+}
+
+.sidebar .nav__link:hover {
+  background-color: #fffbe6;
+}
+
+.sidebar .nav__link:active {
+  background-color: #fffbe6;
+  border-right: 3px solid #faad14;
+}
+
+.sidebar .sidebar__btn {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar .newpost__icon {
+  fill: #ffffff;
+  margin-right: 10px;
+}
+
+/*Card */
+
+.sidebar .sidebar__card {
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  margin-top: 20px;
+}
+
+.sidebar .card__header {
+  background-color: #fafafa;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 23px 25px;
+}
+.sidebar .card__title {
+  font-family: "San Francisco Pro Display Semibold", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+  margin: 0;
+}
+
+.sidebar .card__subtitle {
+  font-family: "San Francisco Pro Display Semibold", sans-serif;
+  color: #d48806;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 10px;
+  text-decoration: none;
+}
+
+.sidebar .card__body {
+  padding: 22px 40px 20px 25px;
+}
+
+.sidebar .card__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #262626;
+  margin: 10px 0;
+}
+
+/*Promo*/
+
+.sidebar .sidebar__promo {
+  background: #fff url("/img/yandex.jpg") no-repeat center center / cover;
+  width: 100%;
+  height: 260px;
+  border: 1px solid #e8e8e8;
+  margin-top: 20px;
+  position: relative;
+  display: block;
+}
+
+.sidebar .sidebar__promo::before {
+  content: "Реклама";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #c4c4c4;
+  padding-left: 26px;
+  padding-right: 26px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/*Add post */
+.content .posts__add {
+  display: flex;
+  flex-direction: column;
+}
+
+.content .add__title {
+  font-family: "San Francisco Pro Display Semibold", sans-serif;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  padding: 23px 31px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+.content .add__title::placeholder {
+  color: #000000;
+}
+
+.content .add__text {
+  min-height: 362px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 23px 31px;
+  margin-bottom: 30px;
+}
+
+.content .add__text::placeholder {
+  color: #595959;
+}
+
+.content .add__button-new-post {
+  max-width: 370px;
+  width: 100%;
+  height: 50px;
+  margin-right: 2%;
+}
+
+.content .add__button-outline {
+  background-color: #ffffff;
+  border: 1px solid #ffc53d;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffc53d;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.content .video__icon,
+.photo__icon {
+  fill: #ffc53d;
+}
+.content .new-post__icon {
+  fill: #ffffff;
+}
+
+.content .add__button-outline:nth-child(2) {
+  margin-right: 1%;
+}
+
+/*Adaptive*/
+
+@media (max-width: 990px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+  }
+  .content {
+    margin-top: 94px;
+    margin-bottom: 60px;
+  }
+  .content .content__posts {
+    width: 100%;
+  }
+  .sidebar {
+    position: fixed;
+    top: 64px;
+    right: 0;
+    z-index: 10;
+    max-width: 320px;
+    width: 100%;
+    height: calc(100% - 64px);
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+    transform: translateX(100%);
+    transition: transform 0.2s;
+    overflow-y: auto;
+  }
+  .sidebar.visible {
+    display: block;
+    transform: translateX(0);
+  }
+  .header__burger {
+    display: block;
+  }
+  .header .nav__list {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .header__nav {
+    display: none;
+  }
+  .content .add__button-new-post {
+    max-width: 270px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header .header__search-form {
+    max-width: 237px;
+    width: 50%;
+  }
+  .header .header__burger {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+  }
+  .content .post__footer {
+    flex-direction: column;
+  }
+  .content .post__tags .tag {
+    margin-right: 5px;
+  }
+  .content .footer-posts__author {
+    margin-top: 15px;
+  }
+  .content .author__about {
+    order: 2;
+    text-align: left;
+  }
+  .content .author__avatar {
+    margin-left: 0;
+    margin-right: 9px;
+  }
+  .content .add__buttons {
+    flex-basis: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content .add__button-new-post {
+    max-width: 100%;
+  }
+  .content .add__button-outline {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header .header__input {
+    padding-left: 0;
+  }
+}
